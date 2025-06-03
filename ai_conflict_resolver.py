@@ -2,7 +2,7 @@ import boto3
 import json
 import re
 import os
-from import_resolver import resolve_import_conflicts  # Import the resolver
+from import_resolver import resolve_import_conflicts, extract_imports
 
 class AIConflictResolver:
     def __init__(self, model_id='anthropic.claude-v2'):
