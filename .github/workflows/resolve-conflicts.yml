@@ -30,7 +30,7 @@ jobs:
         with:
           aws-access-key-id: \${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: \${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2
+          aws-region: us-east-1
           
       - name: Copy resolver scripts
         run: |
@@ -137,7 +137,7 @@ jobs:
               def __init__(self, model_id='anthropic.claude-v2'):
                   self.bedrock_runtime = boto3.client(
                       'bedrock-runtime',
-                      region_name='us-west-2'  # Change to your region
+                      region_name='us-east-1'  # Change to your region
                   )
                   self.model_id = model_id
               
